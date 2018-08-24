@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3BCDC17B21304A6C008D0FFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDC17A21304A6C008D0FFE /* AppDelegate.swift */; };
-		3BCDC17D21304A6C008D0FFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDC17C21304A6C008D0FFE /* ViewController.swift */; };
 		3BCDC18021304A6C008D0FFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDC17E21304A6C008D0FFE /* Main.storyboard */; };
 		3BCDC18221304A6E008D0FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDC18121304A6E008D0FFE /* Assets.xcassets */; };
 		3BCDC18521304A6E008D0FFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCDC18321304A6E008D0FFE /* LaunchScreen.storyboard */; };
+		3BCDC19121304FE0008D0FFE /* EntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDC19021304FE0008D0FFE /* EntryModel.swift */; };
+		3BCDC19321305160008D0FFE /* EntryModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDC19221305160008D0FFE /* EntryModelController.swift */; };
+		3BCDC1952130524B008D0FFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDC1942130524B008D0FFE /* DetailViewController.swift */; };
+		3BCDC19721305264008D0FFE /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCDC19621305264008D0FFE /* EntryListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BCDC17721304A6C008D0FFE /* Journal2.0 practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal2.0 practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCDC17A21304A6C008D0FFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BCDC17C21304A6C008D0FFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3BCDC17F21304A6C008D0FFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BCDC18121304A6E008D0FFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BCDC18421304A6E008D0FFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BCDC18621304A6E008D0FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BCDC19021304FE0008D0FFE /* EntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
+		3BCDC19221305160008D0FFE /* EntryModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryModelController.swift; sourceTree = "<group>"; };
+		3BCDC1942130524B008D0FFE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3BCDC19621305264008D0FFE /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		3BCDC17921304A6C008D0FFE /* Journal2.0 practice */ = {
 			isa = PBXGroup;
 			children = (
-				3BCDC17A21304A6C008D0FFE /* AppDelegate.swift */,
-				3BCDC17C21304A6C008D0FFE /* ViewController.swift */,
-				3BCDC17E21304A6C008D0FFE /* Main.storyboard */,
-				3BCDC18121304A6E008D0FFE /* Assets.xcassets */,
-				3BCDC18321304A6E008D0FFE /* LaunchScreen.storyboard */,
-				3BCDC18621304A6E008D0FFE /* Info.plist */,
+				3BCDC18E21304FBD008D0FFE /* Model */,
+				3BCDC18C21304F8F008D0FFE /* View */,
+				3BCDC18F21304FC5008D0FFE /* Controller */,
+				3BCDC18D21304FAB008D0FFE /* Resources */,
 			);
 			path = "Journal2.0 practice";
+			sourceTree = "<group>";
+		};
+		3BCDC18C21304F8F008D0FFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDC17E21304A6C008D0FFE /* Main.storyboard */,
+				3BCDC18321304A6E008D0FFE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BCDC18D21304FAB008D0FFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDC18121304A6E008D0FFE /* Assets.xcassets */,
+				3BCDC17A21304A6C008D0FFE /* AppDelegate.swift */,
+				3BCDC18621304A6E008D0FFE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3BCDC18E21304FBD008D0FFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDC19021304FE0008D0FFE /* EntryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BCDC18F21304FC5008D0FFE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3BCDC19221305160008D0FFE /* EntryModelController.swift */,
+				3BCDC19621305264008D0FFE /* EntryListTableViewController.swift */,
+				3BCDC1942130524B008D0FFE /* DetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BCDC17D21304A6C008D0FFE /* ViewController.swift in Sources */,
+				3BCDC19321305160008D0FFE /* EntryModelController.swift in Sources */,
+				3BCDC19721305264008D0FFE /* EntryListTableViewController.swift in Sources */,
+				3BCDC19121304FE0008D0FFE /* EntryModel.swift in Sources */,
 				3BCDC17B21304A6C008D0FFE /* AppDelegate.swift in Sources */,
+				3BCDC1952130524B008D0FFE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
